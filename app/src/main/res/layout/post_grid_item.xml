@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grid_item_background"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/my_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="70dp">
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/lineUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/cardImage">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                tools:text="title" />
+
+            <TextView
+                android:id="@+id/firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                tools:text="firstname" />
+
+            <TextView
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                tools:text="lastname" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/publishDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineUserName"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/cardImage"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Post timestamp" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="170dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/cardImage"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publishDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/image"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Post text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text"
+            android:layout_toEndOf="@id/image">
+
+            <LinearLayout
+                android:id="@+id/lineTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/background_tags"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:text="tag 1" />
+
+                <TextView
+                    android:id="@+id/tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_tags"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:text="tag 2" />
+
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_tags"
+                android:paddingLeft="15dp"
+                android:paddingTop="2dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="tag 3" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
