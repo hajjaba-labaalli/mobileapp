@@ -56,12 +56,11 @@ class MainRecyclerAdapter: RecyclerView.Adapter<MainRecyclerAdapter.PostViewHold
             lastname.text=data.owner?.lastName
             title.text=data.owner?.title
 
-
             setOnClickListener{
                 onItemClickListener?.let{it(data)}
             }
             setOnLongClickListener {
-                onItemClickListener.let { it  }
+                onItemLongClickListener.let { it  }
                 return@setOnLongClickListener true
             }
 
@@ -75,10 +74,13 @@ class MainRecyclerAdapter: RecyclerView.Adapter<MainRecyclerAdapter.PostViewHold
     private var onItemClickListener: ((Post) -> Unit)? = null
 
 
+    private var onItemLongClickListener: ((Post) -> Unit)? = null
+
+
     fun setOnItemClickListener(listener: (Post) -> Unit) {
         onItemClickListener = listener
     }
     fun setOnItemLongClickListener(listener: (Post) -> Unit) {
-        onItemClickListener = listener
+        onItemLongClickListener = listener
     }
 }
