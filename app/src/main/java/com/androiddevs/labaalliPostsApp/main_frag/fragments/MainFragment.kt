@@ -43,7 +43,13 @@ class MainFragment : Fragment(R.layout.main_fragment) {
                 bundle
             )
         }
-
+        
+        postsAdapter.setOnItemLongClickListener {
+            val id = viewModel.deletePost(it.id)
+            Snackbar.make(view, "Successfully deleted post $id", Snackbar.LENGTH_LONG).apply {
+                show()
+            }
+        }
 
         viewModel.posts.observe(viewLifecycleOwner, Observer {   response->
             when(response){
